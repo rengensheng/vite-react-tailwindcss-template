@@ -20,7 +20,7 @@ export default function Home() {
       <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow-md max-w-md mx-auto">
         <button
           onClick={() => setCount((count) => count + 1)}
-          className="px-6 py-3 mb-4 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-300"
+          className="px-6 py-3 mb-4 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-opacity-50 transition-colors duration-300"
         >
           count is {count}
         </button>

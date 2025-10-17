@@ -4,6 +4,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
+const Components = lazy(() => import('../pages/Components'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 function LazyComponent({ children }: { children: React.ReactNode }) {
@@ -30,6 +31,14 @@ export function Router() {
         element={
           <LazyComponent>
             <About />
+          </LazyComponent>
+        } 
+      />
+      <Route 
+        path="/components" 
+        element={
+          <LazyComponent>
+            <Components />
           </LazyComponent>
         } 
       />
