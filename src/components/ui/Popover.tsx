@@ -10,14 +10,8 @@ export interface PopoverProps {
   trigger: ReactNode;
   children: ReactNode;
   placement?: 'top' | 'bottom' | 'left' | 'right';
+  className?: string;
 }
-
-const placementStyles = {
-  top: 'bottom-full mb-2',
-  bottom: 'top-full mt-2',
-  left: 'right-full mr-2',
-  right: 'left-full ml-2',
-};
 
 export function Popover({ trigger, children, placement = 'bottom' }: PopoverProps) {
   return (
@@ -36,7 +30,6 @@ export function Popover({ trigger, children, placement = 'bottom' }: PopoverProp
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.15 }}
                 anchor={placement === 'bottom' ? 'bottom start' : placement === 'top' ? 'top start' : undefined}
                 className="
                   z-50 w-80

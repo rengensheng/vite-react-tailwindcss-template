@@ -19,6 +19,7 @@ export interface DialogProps {
   size?: DialogSize;
   showCloseButton?: boolean;
   footer?: ReactNode;
+  className?: string;
 }
 
 const sizeStyles: Record<DialogSize, string> = {
@@ -48,7 +49,6 @@ export function Dialog({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/30 backdrop-blur-sm"
           />
 
@@ -58,7 +58,6 @@ export function Dialog({
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               className={`
                 w-full ${sizeStyles[size]}
                 bg-white dark:bg-gray-800

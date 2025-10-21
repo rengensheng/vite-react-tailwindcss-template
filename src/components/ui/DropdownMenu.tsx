@@ -9,7 +9,7 @@ import {
 } from '@headlessui/react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
-import type { ComponentProps, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 export interface DropdownMenuItemType {
   label: ReactNode;
@@ -18,6 +18,7 @@ export interface DropdownMenuItemType {
   disabled?: boolean;
   selected?: boolean;
   destructive?: boolean;
+  className?: string;
 }
 
 export interface DropdownMenuSectionType {

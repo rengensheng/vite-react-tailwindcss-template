@@ -8,6 +8,7 @@ export interface SwitchProps extends Omit<ComponentProps<typeof HeadlessSwitch>,
   label?: ReactNode;
   description?: ReactNode;
   size?: SwitchSize;
+  className?: string;
 }
 
 const sizeStyles: Record<SwitchSize, { track: string; thumb: string; translateX: number }> = {

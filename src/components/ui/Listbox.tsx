@@ -24,6 +24,7 @@ export interface ListboxProps extends Omit<ComponentProps<typeof HeadlessListbox
   error?: string;
   options: ListboxOptionType[];
   placeholder?: string;
+  className?: string;
 }
 
 export function Listbox({

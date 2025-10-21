@@ -13,6 +13,7 @@ export interface ButtonProps extends Omit<ComponentProps<typeof HeadlessButton>,
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   children: ReactNode;
+  className?: string;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {

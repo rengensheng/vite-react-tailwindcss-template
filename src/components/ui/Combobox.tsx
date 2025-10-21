@@ -26,6 +26,7 @@ export interface ComboboxProps extends Omit<ComponentProps<typeof HeadlessCombob
   error?: string;
   options: ComboboxOptionType[];
   placeholder?: string;
+  className?: string;
 }
 
 export function Combobox({

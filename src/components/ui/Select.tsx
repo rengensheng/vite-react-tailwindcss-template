@@ -19,7 +19,8 @@ export interface SelectProps extends Omit<ComponentProps<typeof HeadlessSelect>,
   options: SelectOption[];
   placeholder?: string;
   value?: string | null;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
 }
 
 const sizeStyles: Record<SelectSize, string> = {

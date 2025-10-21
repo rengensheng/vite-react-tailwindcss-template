@@ -13,6 +13,7 @@ export interface TabItem {
   icon?: ReactNode;
   content: ReactNode;
   disabled?: boolean;
+  className?: string;
 }
 
 export interface TabsProps {
@@ -20,6 +21,7 @@ export interface TabsProps {
   variant?: 'default' | 'pills' | 'underline';
   defaultIndex?: number;
   onChange?: (index: number) => void;
+  className?: string;
 }
 
 const variantStyles = {

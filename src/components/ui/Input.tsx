@@ -16,10 +16,11 @@ export interface InputProps extends Omit<ComponentProps<typeof HeadlessInput>, '
   rightIcon?: ReactNode;
   value?: string|number|null;
   placeholder?: string;
-  onChange: (e:React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e:React.ChangeEvent<HTMLInputElement>) => void;
   min?: number;
   max?: number;
   step?: number;
+  className?: string;
 }
 
 const sizeStyles: Record<InputSize, string> = {

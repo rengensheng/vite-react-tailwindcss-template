@@ -12,6 +12,7 @@ export interface DisclosureProps {
   children: ReactNode;
   defaultOpen?: boolean;
   variant?: 'default' | 'bordered' | 'filled';
+  className?: string;
 }
 
 const variantStyles = {

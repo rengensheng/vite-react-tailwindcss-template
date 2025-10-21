@@ -4,7 +4,9 @@ import type { ComponentProps, ReactNode } from 'react';
 export interface FieldsetProps extends Omit<ComponentProps<typeof HeadlessFieldset>, 'className'> {
   legend?: ReactNode;
   description?: ReactNode;
+  children: ReactNode;
   disabled?: boolean;
+  className?: string;
 }
 
 export function Fieldset({

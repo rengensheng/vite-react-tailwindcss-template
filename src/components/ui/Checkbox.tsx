@@ -10,6 +10,7 @@ export interface CheckboxProps extends Omit<ComponentProps<typeof HeadlessCheckb
   description?: ReactNode;
   size?: CheckboxSize;
   indeterminate?: boolean;
+  className?: string;
 }
 
 const sizeStyles: Record<CheckboxSize, { box: string; icon: number }> = {

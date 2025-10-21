@@ -15,6 +15,7 @@ export interface RadioOption {
   value: string;
   label: ReactNode;
   description?: ReactNode;
+  className?: string;
   disabled?: boolean;
 }
 
