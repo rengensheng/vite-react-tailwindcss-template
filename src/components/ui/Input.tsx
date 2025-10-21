@@ -7,7 +7,7 @@ export type InputVariant = 'default' | 'filled' | 'flushed';
 
 export interface InputProps extends Omit<ComponentProps<typeof HeadlessInput>, 'className' | 'size'> {
   label?: ReactNode;
-  type?: 'text' | 'email' | 'number';
+  type?: 'text' | 'email' | 'number'|'password';
   description?: ReactNode;
   error?: string;
   size?: InputSize;

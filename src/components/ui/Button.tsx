@@ -138,6 +138,7 @@ export function Button({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2, delay: 0.05 }}
+          className='inline-flex items-center justify-center'
         >
           {children}
         </motion.span>

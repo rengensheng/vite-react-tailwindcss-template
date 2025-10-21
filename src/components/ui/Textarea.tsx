@@ -12,6 +12,7 @@ export interface TextareaProps extends Omit<ComponentProps<typeof HeadlessTextar
   resize?: 'none' | 'vertical' | 'horizontal' | 'both';
   value?: string | null;
   placeholder?: string;
+  rows?: number;
   onChange?: (e:React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
 }
