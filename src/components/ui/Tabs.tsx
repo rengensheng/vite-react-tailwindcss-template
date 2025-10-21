@@ -37,6 +37,7 @@ const variantStyles = {
       text-gray-600 dark:text-gray-400
       data-[disabled]:opacity-50 data-[disabled]:cursor-not-allowed
     `,
+    content: 'inline-flex items-center justify-center gap-2',
   },
   pills: {
     list: 'flex space-x-2',
@@ -51,6 +52,7 @@ const variantStyles = {
       text-gray-600 dark:text-gray-400
       data-[disabled]:opacity-50 data-[disabled]:cursor-not-allowed
     `,
+    content: 'inline-flex items-center justify-center gap-2',
   },
   underline: {
     list: 'flex space-x-6 border-b-2 border-gray-200 dark:border-gray-700',
@@ -63,6 +65,7 @@ const variantStyles = {
       text-gray-600 dark:text-gray-400
       data-[disabled]:opacity-50 data-[disabled]:cursor-not-allowed
     `,
+    content: 'relative inline-flex items-center gap-2',
   },
 };
 
@@ -75,7 +78,7 @@ export function Tabs({ items, variant = 'default', defaultIndex = 0, onChange }:
         {items.map((item, index) => (
           <Tab key={index} disabled={item.disabled} className={styles.tab}>
             {({ selected }) => (
-              <div className="relative flex items-center justify-center gap-2">
+              <div className={styles.content}>
                 {item.icon && <span className="flex-shrink-0">{item.icon}</span>}
                 <span>{item.label}</span>
                 {variant === 'underline' && selected && (
