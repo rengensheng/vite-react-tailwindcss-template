@@ -25,6 +25,7 @@ import {
   ChevronsRight,
   Settings2,
   Download,
+  Loader2,
 } from 'lucide-react';
 import { useState, useMemo, type ReactNode } from 'react';
 import { Button } from './Button';
@@ -56,6 +57,8 @@ export interface TableProps<TData> {
   compact?: boolean;
   stickyHeader?: boolean;
   maxHeight?: string;
+  loading?: boolean;
+  loadingMessage?: string;
 }
 
 export function Table<TData>({
@@ -82,6 +85,8 @@ export function Table<TData>({
   compact = false,
   stickyHeader = false,
   maxHeight = '600px',
+  loading = false,
+  loadingMessage = '加载中...',
 }: TableProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -374,7 +379,24 @@ export function Table<TData>({
             </thead>
             <tbody>
               <AnimatePresence mode="popLayout">
-                {table.getRowModel().rows.length === 0 ? (
+                {loading ? (
+                  <tr>
+                    <td
+                      colSpan={table.getVisibleFlatColumns().length}
+                      className="text-center py-12"
+                    >
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="flex flex-col items-center gap-3"
+                      >
+                        <Loader2 size={48} className="text-blue-500 animate-spin" />
+                        <p className="text-gray-600 dark:text-gray-400">{loadingMessage}</p>
+                      </motion.div>
+                    </td>
+                  </tr>
+                ) : table.getRowModel().rows.length === 0 ? (
                   <tr>
                     <td
                       colSpan={table.getVisibleFlatColumns().length}

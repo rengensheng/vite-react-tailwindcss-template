@@ -259,6 +259,7 @@ function Rating({ rating }: { rating: number }) {
 export default function TableDemo() {
   const [data, setData] = useState<Employee[]>(generateEmployees());
   const [selectedRows, setSelectedRows] = useState<Employee[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const columnHelper = createColumnHelper<Employee>();
 
@@ -405,8 +406,12 @@ export default function TableDemo() {
     URL.revokeObjectURL(url);
   };
 
-  const handleRefresh = () => {
+  const handleRefresh = async () => {
+    setIsLoading(true);
+    // 模拟网络请求延迟
+    await new Promise(resolve => setTimeout(resolve, 1500));
     setData(generateEmployees());
+    setIsLoading(false);
   };
 
   const handleAddNew = () => {
@@ -550,6 +555,8 @@ export default function TableDemo() {
             pageSize={10}
             pageSizeOptions={[5, 10, 15, 20, 50]}
             onRowSelectionChange={setSelectedRows}
+            loading={isLoading}
+            loadingMessage="正在加载员工数据..."
             emptyMessage={
               <div className="text-center">
                 <p className="text-lg font-medium text-gray-600 dark:text-gray-400 mb-1">
@@ -575,6 +582,8 @@ export default function TableDemo() {
                   size="sm"
                   leftIcon={<RefreshCw size={16} />}
                   onClick={handleRefresh}
+                  loading={isLoading}
+                  disabled={isLoading}
                 >
                   刷新
                 </Button>
