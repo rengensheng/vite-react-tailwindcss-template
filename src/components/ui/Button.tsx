@@ -100,7 +100,7 @@ export function Button({
         inline-flex items-center justify-center
         font-medium rounded-lg
         transition-all duration-200
-        focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-2
+        focus:outline-none focus:ring-blue-500 focus:ring-offset-2
         dark:focus:ring-offset-gray-900
         disabled:cursor-not-allowed disabled:opacity-50
         ${variantStyles[variant]}

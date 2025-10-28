@@ -30,7 +30,7 @@ const variantStyles = {
     tab: `
       w-full rounded-md py-2.5 px-3 text-sm font-medium
       transition-all duration-200
-      focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100
+      focus:outline-none focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-100
       dark:focus:ring-offset-gray-800
       data-[selected]:bg-white data-[selected]:shadow
       dark:data-[selected]:bg-gray-700
@@ -46,7 +46,7 @@ const variantStyles = {
     tab: `
       rounded-full py-2.5 px-4 text-sm font-medium
       transition-all duration-200
-      focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-2
+      focus:outline-none focus:ring-blue-500 focus:ring-offset-2
       data-[selected]:bg-blue-500 dark:data-[selected]:bg-blue-600
       data-[selected]:text-white
       data-[hover]:bg-gray-100 dark:data-[hover]:bg-gray-700

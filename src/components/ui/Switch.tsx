@@ -31,7 +31,7 @@ export function Switch({
         group relative inline-flex ${sizeStyles[size].track} shrink-0
         rounded-full border-2 border-transparent
         transition-colors duration-200 ease-in-out
-        focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-2
+        focus:outline-none focus:ring-blue-500 focus:ring-offset-2
         dark:focus:ring-offset-gray-900
         disabled:cursor-not-allowed disabled:opacity-50
         data-[checked]:bg-blue-500 data-[checked]:dark:bg-blue-600

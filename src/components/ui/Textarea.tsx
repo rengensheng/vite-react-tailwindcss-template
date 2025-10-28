@@ -68,7 +68,7 @@ export function Textarea({
           text-gray-900 dark:text-gray-100
           placeholder:text-gray-400 dark:placeholder:text-gray-500
           transition-all duration-200
-          focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-0
+          focus:outline-none focus:ring-blue-500 focus:ring-offset-0
           disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-gray-100 dark:disabled:bg-gray-900
         `}
         {...props}

@@ -62,7 +62,7 @@ export function RadioGroup({
                 ${sizeStyles[size].radio}
                 rounded-full border-2
                 transition-all duration-200
-                focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-2
+                focus:outline-none focus:ring-blue-500 focus:ring-offset-2
                 dark:focus:ring-offset-gray-900
                 disabled:cursor-not-allowed disabled:opacity-50
                 data-[checked]:bg-blue-500 data-[checked]:border-blue-500

@@ -472,7 +472,7 @@ export function Table<TData>({
                 onChange={(e) => {
                   table.setPageSize(Number(e.target.value));
                 }}
-                className="h-9 px-3 text-sm border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                className="h-9 px-3 text-sm border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               >
                 {pageSizeOptions.map((size) => (
                   <option key={size} value={size}>
