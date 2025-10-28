@@ -11,7 +11,6 @@ import {
   Bell,
   HelpCircle,
   Plus,
-  Trash2,
   Edit,
   Share2,
   Download,
@@ -35,17 +34,16 @@ import {
   DropdownMenu,
   Disclosure,
   Dialog,
-  Popover,
+  PopoverWrapper,
   Tabs,
 } from '../components/ui';
+import TableDemo from './TableDemo';
 
 export default function ComponentsDemo() {
   const [darkMode, setDarkMode] = useState(false);
   const [checked, setChecked] = useState(false);
   const [switchEnabled, setSwitchEnabled] = useState(false);
-  const [radioValue, setRadioValue] = useState('option1');
   const [selectedCountry, setSelectedCountry] = useState('usa');
-  const [selectedCity, setSelectedCity] = useState('');
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const toggleDarkMode = () => {
@@ -247,8 +245,6 @@ export default function ComponentsDemo() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <RadioGroup
                           label="选择订阅方案"
-                          value={radioValue}
-                          onChange={setRadioValue}
                           options={[
                             {
                               value: 'option1',
@@ -270,7 +266,7 @@ export default function ComponentsDemo() {
                         <RadioGroup
                           label="选择主题"
                           value="light"
-                          onChange={() => {}}
+                          onChange={() => { }}
                           orientation="horizontal"
                           options={[
                             { value: 'light', label: '亮色' },
@@ -296,8 +292,6 @@ export default function ComponentsDemo() {
                         <Listbox
                           label="自定义选择器"
                           options={cities}
-                          value={selectedCity}
-                          onChange={setSelectedCity}
                           placeholder="选择城市"
                         />
                         <Combobox
@@ -586,7 +580,7 @@ export default function ComponentsDemo() {
                         Popover 气泡卡片
                       </h2>
                       <div className="flex gap-4">
-                        <Popover
+                        <PopoverWrapper
                           trigger={
                             <Button variant="outline" leftIcon={<HelpCircle size={16} />}>
                               帮助
@@ -604,9 +598,9 @@ export default function ComponentsDemo() {
                               查看文档
                             </Button>
                           </div>
-                        </Popover>
+                        </PopoverWrapper>
 
-                        <Popover
+                        <PopoverWrapper
                           trigger={
                             <Button variant="ghost" leftIcon={<Bell size={16} />}>
                               通知
@@ -628,12 +622,17 @@ export default function ComponentsDemo() {
                               </div>
                             </div>
                           </div>
-                        </Popover>
+                        </PopoverWrapper>
                       </div>
                     </section>
                   </div>
                 ),
               },
+              {
+                label: 'Table',
+                icon: <Code size={16} />,
+                content: (<TableDemo />)
+              }
             ]}
           />
         </div>

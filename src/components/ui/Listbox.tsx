@@ -16,6 +16,7 @@ export interface ListboxOptionType {
   label: ReactNode;
   description?: string;
   disabled?: boolean;
+  onChange?: (e:React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface ListboxProps extends Omit<ComponentProps<typeof HeadlessListbox>, 'className'> {

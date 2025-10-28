@@ -47,10 +47,8 @@ export function Combobox({
     query === ''
       ? options
       : options.filter((option) =>
-          option.label.toLowerCase().includes(query.toLowerCase())
-        );
-
-  const selectedOption = options.find((opt) => opt.value === value);
+        option.label.toLowerCase().includes(query.toLowerCase())
+      );
 
   return (
     <Field className="w-full">
